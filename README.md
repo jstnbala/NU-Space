@@ -1,6 +1,6 @@
 # NU Space
 
-A new Flutter project.
+A Flutter Project for Mobile Programming
 
 ## Getting Started
 
