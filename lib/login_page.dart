@@ -286,7 +286,7 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 25),
                 // Login Button
                 Container(
-                  margin: EdgeInsets.only(left: 16, right: 16),
+                  margin: EdgeInsets.only(left: 50, right: 50),
                   child: ElevatedButton(
                     onPressed: () {
                       // Add functionality for Login button
