@@ -1,6 +1,8 @@
 //ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/dashboard.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -23,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Color(0xFF4A5299),
       body: Column(
         children: [
-          Container(
+          SizedBox(
             height: 250,
             child: Stack(
               fit: StackFit.expand,
@@ -288,6 +290,15 @@ class _LoginPageState extends State<LoginPage> {
                   child: ElevatedButton(
                     onPressed: () {
                       // Add functionality for Login button
+                  
+                        // Navigate to the TestPage
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Dashboard(),
+                          ),
+                        );
+                  
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color(0xFFFED41C), // Button color
