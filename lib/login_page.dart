@@ -19,8 +19,8 @@ class _LoginPageState extends State<LoginPage> {
   bool rememberMe = false;
 
   // Predefined valid credentials
-  final String validEmail = "balajt@students.national-u.edu.ph";
-  final String validPassword = "@Justin17";
+  final String validEmail = "batman@students.national-u.edu.ph";
+  final String validPassword = "@Batman17";
 
   @override
   Widget build(BuildContext context) {
