@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/about.dart';
+import 'package:flutter_application_1/login_page.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -77,58 +79,7 @@ class NavBar extends StatelessWidget {
                 thickness: 3.0, // Increase the thickness of the divider
               ),
             ),
-            // Card for PROFILE
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8), // Adjust vertical padding as needed
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0), // Adjust the border radius as needed
-                ),
-                color: Color.fromARGB(100, 1, 31, 78), // Set color with low opacity
-                child: ListTile(
-                  leading: const Icon(
-                    Icons.person,
-                    color: Color.fromARGB(255, 1, 31, 78), // Set the icon color to white or any other color that fits the design
-                  ),
-                  title: const Text(
-                    'PROFILE',
-                    style: TextStyle(
-                      color: Colors.white, // Set the text color to white or any other color that fits the design
-                      fontFamily: 'Poppins', // Set Poppins font
-                    ),
-                  ),
-                  onTap: () => null,
-                ),
-              ),
-            ),
-
-            // Repeat the same pattern for SETTINGS, SEND FEEDBACK, and ABOUT NU SPACE
-
-            // Card for SETTINGS
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8), // Adjust vertical padding as needed
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15.0), // Adjust the border radius as needed
-                ),
-                color: Color.fromARGB(100, 1, 31, 78), // Set color with low opacity
-                child: ListTile(
-                  leading: const Icon(
-                    Icons.settings,
-                    color: Color.fromARGB(255, 1, 31, 78), // Set the icon color to white or any other color that fits the design
-                  ),
-                  title: const Text(
-                    'SETTINGS',
-                    style: TextStyle(
-                      color: Colors.white, // Set the text color to white or any other color that fits the design
-                      fontFamily: 'Poppins', // Set Poppins font
-                    ),
-                  ),
-                  onTap: () => null,
-                ),
-              ),
-            ),
-
+            
             // Card for SEND FEEDBACK
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8), // Adjust vertical padding as needed
@@ -174,7 +125,12 @@ class NavBar extends StatelessWidget {
                       fontFamily: 'Poppins', // Set Poppins font
                     ),
                   ),
-                  onTap: () => null,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                        MaterialPageRoute(builder: (context) => Aboutpage()), // Navigating to the AboutPage
+                     );
+                   },
                 ),
               ),
             ),
@@ -195,7 +151,7 @@ class NavBar extends StatelessWidget {
                   onPressed: () {
                     // Add functionality for Logout button
                     Navigator.pop(context); // Close the drawer
-                    // Implement your logout logic here
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage())); // Navigate to LoginPage and replace the current route
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.red, // Set background color for the button
@@ -214,12 +170,12 @@ class NavBar extends StatelessWidget {
                         ),
                         SizedBox(width: 5),
                         Text(
-                          'LOGOUT',
-                          style: TextStyle(
-                            color: Colors.white, // Text color
-                            fontSize: 13,
-                            fontWeight: FontWeight.bold, // Make the text bold
-                            fontFamily: 'Poppins', // Set Poppins font
+                            'LOGOUT',
+                            style: TextStyle(
+                              color: Colors.white, // Text color
+                              fontSize: 13,
+                              fontWeight: FontWeight.bold, // Make the text bold
+                              fontFamily: 'Poppins', // Set Poppins font
                           ),
                         ),
                       ],
