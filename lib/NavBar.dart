@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/about.dart';
+import 'package:flutter_application_1/feedback.dart';
 import 'package:flutter_application_1/login_page.dart';
 
 class NavBar extends StatelessWidget {
@@ -60,7 +61,7 @@ class NavBar extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   const Text(
-                    'BALA, JUSTIN T.', // Replace with the actual user name
+                    'AKO SI BATMAN.', // Replace with the actual user name
                     style: TextStyle(
                       color: Color.fromARGB(255, 255, 255, 255),
                       fontSize: 20,
@@ -100,7 +101,13 @@ class NavBar extends StatelessWidget {
                       fontFamily: 'Poppins', // Set Poppins font
                     ),
                   ),
-                  onTap: () => null,
+                   onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FeedbackPage()), // Navigate to FeedbackPage
+                    );
+                  },
                 ),
               ),
             ),
