@@ -183,7 +183,7 @@ class Dashboard extends StatelessWidget {
                               children: [
                                 SizedBox(height: 140.0),
                                 Text(
-                                  'Reservation Info of Students and Staff',
+                                  'Reservation Info of Students',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
@@ -217,9 +217,10 @@ class Dashboard extends StatelessWidget {
               child: Text(
                 'LOGOUT',
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
-                    fontFamily: 'Poppins',
+                  color: Color.fromARGB(255, 56, 65, 142),
+                  fontSize: 15.0,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
